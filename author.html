@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Authors</title>
+  </head>
+  <body>
+    <h1 class="text-4xl text-center m-5">Authors will be added here</h1>
+    <div class="flex gap-5 mb-10 justify-center">
+      <button
+        class="border rounded-lg p-3 cursor-pointer mt-5 text-white bg-blue-500"
+        onclick="navigate(`index.html`)"
+      >
+        Back to Home
+      </button>
+      <button
+        class="border rounded-lg p-3 cursor-pointer mt-5 text-white bg-green-500"
+        onclick="navigate(`add.html`)"
+      >
+        Add Blogs here  
+      </button>
+    </div>
+    <form class="form_authors flex flex-col items-center m-5">
+      <input
+        class="first_name border w-1/3 p-2 rounded-lg m-3"
+        type="text"
+        placeholder="first_name..."
+      />
+      <input
+        class="last_name border w-1/3 p-2 rounded-lg m-3"
+        type="text"
+        placeholder="last_name..."
+      />
+      <input
+        class="phone_number border w-1/3 p-2 rounded-lg m-3"
+        type="tel"
+        placeholder="phone_number..."
+      />
+      <button class="border rounded-lg w-1/3 p-1 bg-green-700 text-white">
+        Send
+      </button>
+    </form>
+
+    <h2 class="text-4xl text-center m-5">Authors</h2>
+    <div class="container">
+      <ul class="list_authors flex flex-wrap gap-5 justify-center"></ul>
+    </div>
+    <!-- some JS codes here  -->
+    <script>
+      function navigate(location) {
+        window.location.pathname = location;
+      }
+    </script>
+    <script src="author.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex gap-5 justify-center items-center">
+      <button
+        class="border rounded-lg p-3 cursor-pointer text-white bg-green-500 mt-5"
+        onclick="navigate(`add.html`)"
+      >
+        ADD blogs thing
+      </button>
+      <button
+        class="border rounded-lg bg-blue-500 text-white p-3 cursor-pointer mt-5"
+        onclick="navigate(`author.html`)"
+      >
+        ADD new Author
+      </button>
+    </div>
+    <button class=""></button>
+    <table class="w-full border-collapse rounded-lg overflow-hidden shadow-lg">
+      <thead>
+        <tr class="bg-gray-800 text-white">
+          <th class="px-6 py-3 text-left border-b">Id</th>
+          <th class="px-6 py-3 text-left border-b">Title</th>
+          <th class="px-6 py-3 text-left border-b">Author</th>
+          <th class="px-6 py-3 text-left border-b">Category</th>
+          <th class="px-6 py-3 text-left border-b">Description</th>
+          <th class="px-6 py-3 text-left border-b">Created at</th>
+          <th class="px-6 py-3 text-left border-b">Delete</th>
+          <th class="px-6 py-3 text-left border-b">Edit</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-300 table_body"></tbody>
+    </table>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Edit blogs</title>
+  </head>
+  <body>
+    <h2 class="text-4xl text-center m-5">Edited blogs</h2>
+    <form class="flex flex-col mx-auto my-10 w-[500px]">
+      <label for="title">Title</label>
+      <input name="title" class="border rounded-lg" type="text" id="title" />
+      <label for="poster">Image</label>
+      <input class="border rounded-lg" type="text" name="poster" id="poster" />
+      <label for="desc">Description</label>
+      <input class="border rounded-lg" type="text" name="desc" id="desc" />
+      <label for="author_id">Author</label>
+      <select
+        id="select"
+        class="border rounded-lg"
+        type="text"
+        name="author_id"
+      ></select>
+      <button class="w-full bg-blue-300 border rounded-lg mt-3" type="submit">
+        Send
+      </button>
+    </form>
+  </body>
+  <script src="editBlogs.js"></script>
+</html>
