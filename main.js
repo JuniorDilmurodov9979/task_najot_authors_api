@@ -35,11 +35,11 @@ function renderData(data) {
       <td class="text-left px-6"> 
       <button class="py-4 delete cursor-pointer text-red-500" onclick="deleteBtn(${
         item.id
-      })">Delete</button>
+      }, ${item.authorId})">Delete</button>
       </td>
       <td class="text-left px-6">
       <a href="edit.html?id=${item.id}">  
-      <button class="py-4 delete cursor-pointer text-yellow-500" onclick="editBtn(${
+      <button class="py-4 edit cursor-pointer text-yellow-500" onclick="editBtn(${
         item.id
       })">Edit</button>
       </a> 
@@ -48,11 +48,17 @@ function renderData(data) {
     table_body.appendChild(tr);
   });
 }
-async function deleteBtn(id) {
+async function deleteBtn(id, authorId) {
   console.log("delete clicked");
+  if (!authorId) {
+    alert(
+      "You can't delete this item. Please edit and assign an author first."
+    );
+    return;
+  }
 
   let res = await fetch(
-    `https://679505fcaad755a134eb02e3.mockapi.io/api/authors/7/blog-list/${id}`,
+    `https://679505fcaad755a134eb02e3.mockapi.io/api/authors/${authorId}/blog-list/${id}`,
     { method: "DELETE" }
   );
   let data = await res.json();
